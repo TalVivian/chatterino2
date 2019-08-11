@@ -12,7 +12,7 @@
 #include "widgets/Window.hpp"
 
 #ifdef Q_OS_WIN
-#    include <wintoastlib.h>
+//#    include <wintoastlib.h>
 #endif
 
 #include <QDesktopServices>

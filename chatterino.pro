@@ -1,3 +1,5 @@
+CONFIG += static
+
 QT                += widgets core gui network multimedia svg concurrent
 CONFIG            += communi
 COMMUNI           += core model util
@@ -48,7 +50,7 @@ include(lib/fmt.pri)
 include(lib/humanize.pri)
 include(lib/libcommuni.pri)
 include(lib/websocketpp.pri)
-include(lib/wintoast.pri)
+#include(lib/wintoast.pri)
 include(lib/signals.pri)
 include(lib/settings.pri)
 include(lib/serialize.pri)

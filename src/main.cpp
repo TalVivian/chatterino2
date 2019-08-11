@@ -31,4 +31,5 @@ int main(int argc, char **argv)
 
         runGui(a, paths, settings);
     }
+    return 0;
 }

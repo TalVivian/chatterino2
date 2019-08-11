@@ -11,7 +11,7 @@
 #include "util/StreamLink.hpp"
 #include "widgets/helper/CommonTexts.hpp"
 
-#ifdef Q_OS_WIN
+#ifdef Q_OS_WIN_I_DISABLED_IT
 
 #    include <wintoastlib.h>
 
@@ -35,7 +35,7 @@ std::map<ToastReaction, QString> Toasts::reactionToString = {
 
 bool Toasts::isEnabled()
 {
-#ifdef Q_OS_WIN
+#ifdef Q_OS_WIN_I_DISABLED_IT
     return WinToastLib::WinToast::isCompatible() &&
            getSettings()->notificationToast;
 #else
@@ -65,7 +65,7 @@ QString Toasts::findStringFromReaction(
 
 void Toasts::sendChannelNotification(const QString &channelName, Platform p)
 {
-#ifdef Q_OS_WIN
+#ifdef Q_OS_WIN_I_DISABLED_IT
     auto sendChannelNotification = [this, channelName, p] {
         this->sendWindowsNotification(channelName, p);
     };
@@ -98,7 +98,7 @@ void Toasts::sendChannelNotification(const QString &channelName, Platform p)
     }
 }
 
-#ifdef Q_OS_WIN
+#ifdef Q_OS_WIN_I_DISABLED_IT
 
 class CustomHandler : public WinToastLib::IWinToastHandler
 {

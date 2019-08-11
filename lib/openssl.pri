@@ -1,4 +1,4 @@
-win32 {
+win32_I_DISABLED_IT {
     isEmpty(OPENSSL_DIRECTORY) {
         message(Using default openssl directory C:\\local\\openssl)
         OPENSSL_DIRECTORY = C:\local\openssl
